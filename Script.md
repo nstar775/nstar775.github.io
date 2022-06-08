@@ -2,7 +2,7 @@
 
 ## Script
 ## ▶목차
-#### 1. [시스템 관련](#-시스템-관련-1)
+#### 1. [시스템 관련](#1-시스템-관련-1)
 #### 2. [튜토리얼 스테이지 관련](#-related-images--videos)
 #### 3. [스테이지1 관련](#-representative-image)
 #### 4. [스테이지2 관련](#-describe-the-concept--representative-image)
