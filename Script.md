@@ -3,7 +3,7 @@
 ## Script
 ## ▶목차
 #### 1. [시스템 관련](#1-시스템-관련-1)
-#### 2. [튜토리얼 스테이지 관련](#-related-images--videos)
+#### 2. [튜토리얼 스테이지 관련](#1-튜토리얼-스테이지-관련)
 #### 3. [스테이지1 관련](#-representative-image)
 #### 4. [스테이지2 관련](#-describe-the-concept--representative-image)
 #### 5. [엔딩 ](#-escape-to-memorys-ingredients)
@@ -617,7 +617,7 @@ public class PlayerController2 : MonoBehaviour
 
 ________________________  
 
-## 1. 튜토리얼 스테이지 관련
+## 2. 튜토리얼 스테이지 관련
 
 ### A. DoorTrigger.cs
 ```cs
