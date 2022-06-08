@@ -1,5 +1,5 @@
 # ProJect Name : 《Estate Escape》
-#### [Estate Escape](#index.md)의 Script항목입니다.  
+#### [Estate Escape](index.md)의 Script항목입니다.  
 _________________________
 ## ▶목차
 #### 1. [시스템 관련](#1-시스템-관련-1)
