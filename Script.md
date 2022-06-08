@@ -1407,7 +1407,7 @@ public class Sound_Event : MonoBehaviour
 
 ________________________  
 
-## 3. 스테이지2 관련
+## 4. 스테이지2 관련
 ### A. Warp.cs  
 ```cs
 // 1스테이지가 클리어 되었을떄, 2스테이지로 가기 위한 스크립트.
@@ -1797,7 +1797,7 @@ public class Ending : MonoBehaviour
 
 ________________________  
 
-## 3. 엔딩 관련
+## 5. 엔딩 관련
 ### A. TypingEffect.cs  
 ```cs
 // 엔딩에서 글씨가 한글자 한글자씩 출력 되게 한다.
