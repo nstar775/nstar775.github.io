@@ -452,6 +452,7 @@ public class SceneLoader : MonoBehaviour
             if (Input.anyKeyDown && progressbar.value >= 1f && operation.progress >= 0.9f)
             {
                 operation.allowSceneActivation = true;
+                Game_Manager.instance.Cursor_LockOn = true;
             }
         }
     }
