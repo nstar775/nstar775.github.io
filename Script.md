@@ -201,7 +201,7 @@ public class StageManager : MonoBehaviour
         if (SpringCounter == SpringClearCount && WinterCounter == 4  && SummerCounter == 8 && FallCounter == 6)
         {
             Clear_Counter++;
-
+            
             SpringCounter = 0;
             WinterCounter = 0;
             SummerCounter = 0;
@@ -216,6 +216,7 @@ public class StageManager : MonoBehaviour
                 HiddenClear_Counter = 0;
             }
         }
+       
     }
 
     private void SoundEvent()
@@ -256,7 +257,6 @@ public class StageManager : MonoBehaviour
     }
 
 }
-
 ```  
 
 ### B. Game_Manager.cs
@@ -272,7 +272,6 @@ public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager instance;
 
-    [SerializeField]
     public bool Cursor_LockOn;
     public static bool pauseTime;
 
@@ -305,10 +304,11 @@ public class Game_Manager : MonoBehaviour
             }
             else{ } //None
         }
+
     }
 
 
-    private void CursorLockOn()
+    public void CursorLockOn()
     {
         if (Cursor_LockOn == true)
         {
@@ -717,11 +717,10 @@ public class DoorTrigger : MonoBehaviour
 
     public void Initialized()
     {
-        AudioManager.instance.SFXPlay("문 여는 소리 ", clip[0]);
-        AudioManager.instance.SFXPlay("문 닫는 소리", clip[1]);
         door.SetActive(!doorOpen);
     }
 }
+
 ```
 
 ### B. Tuto_Button.cs
@@ -1028,7 +1027,7 @@ public class EventTutorial : MonoBehaviour
 }
 ```
 
-### E. PassWord_Toggle.cs  
+### E. PassWord_Box.cs  
 ```cs
 using System.Collections;
 using System.Collections.Generic;
@@ -1120,11 +1119,20 @@ public class PassWord_Box : MonoBehaviour
 
     }
 
+    public void Initialized()
+    {
+        Pass = false;
+        PassWord_Check = 0;
+    }
+
 }
-```  
+
+```
 
 ### F. PassWord_Toggle.cs  
 ```cs
+// 패스워드박스를 열어줄수 있는 UI를 띄운다.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -1135,7 +1143,7 @@ public class PassWord_Toggle : MonoBehaviour
     public GameObject Respawn;
 
     private bool pauseTime = false;
-
+    
     public GameObject PasswordBox;
     public GameObject ask_UI;
 
@@ -1680,8 +1688,12 @@ public class Chairs : MonoBehaviour
         }
     }
 
-}
+    public void Initialized()
+    {
+        Chair.SetBool("Active", false);
+    }
 
+}
 ```  
 
 ### E. Ending.cs  
@@ -1703,6 +1715,12 @@ public class Ending : MonoBehaviour
     public bool PlayerHit;
     public GameObject Player_EndingCamera;
     public string[] Scenes;
+
+    [Header("Initialized Script")]
+    public StageManager stageManager;
+    public Tuto_Piano tuto_Piano;
+    public PassWord_Box PassWord;
+    public DoorTrigger[] doors;
 
     private void Start()
     {
@@ -1733,6 +1751,7 @@ public class Ending : MonoBehaviour
                 if (FadeTime >= 5)
                 {
                     SceneManager.LoadScene(Scenes[1]);
+                    All_Initialized();
                     FadeTime = 0;
                     PlayerHit = false;
                 }
@@ -1791,8 +1810,19 @@ public class Ending : MonoBehaviour
             PlayerHit = true;
         }
     }
-}
 
+
+    private void All_Initialized()
+    {
+        stageManager.Initialized();
+        tuto_Piano.Initialized();
+        PassWord.Initialized();
+        for (int i = 0; i < doors.Length; i++)
+        {
+            doors[i].Initialized();
+        }
+    }
+}
 ```
 
 ________________________  
@@ -1855,12 +1885,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class Invoke_Game : MonoBehaviour
 {
     public Animator Ending_UI_Anime;
 
     public GameObject EndingCanvas;
-
+    
     private void Update()
     {
         if (Input.anyKeyDown)
@@ -1875,7 +1910,6 @@ public class Invoke_Game : MonoBehaviour
         }
     }
 }
-
 ```
 
 ### B. ReturnToMain.cs  
@@ -1883,7 +1917,7 @@ public class Invoke_Game : MonoBehaviour
 //말 그대로 아무키나 누르면 메인 매뉴로 바로 넘어간다.
 //특수 엔딩이 아닌 노멀 엔딩일 시, 스토리가 따로나오지 않으며,
 //Thank you for playing 만 나오기 떄문에, 해당 씬만 유일하게 이 스크립트를 사용하며, 대부분 인보크게임 스크립트를 사용한다.
-//인보크는 초기화라는 뜻을 가지고 있는데, 이는 스크립트 네이밍 미스이다.
+//인보크는 불러오다 라는 뜻을 가지고 있는데, 이는  스크립트 네이밍 미스이지만, 여기서는 초기 화면을 불러오는 의미로 쓰인다...
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
