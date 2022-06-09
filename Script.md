@@ -1869,7 +1869,7 @@ public class Invoke_Game : MonoBehaviour
 
             if (EndingCanvas.activeSelf)
             {
-                Game_Manager.pauseGame();
+                Game_Manager.instance.Cursor_LockOn = false;
                 SceneManager.LoadScene(0);
             }
         }
@@ -1895,7 +1895,7 @@ public class ReturnToMain : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            Game_Manager.pauseGame();
+            Game_Manager.instance.Cursor_LockOn = false;
             SceneManager.LoadScene("Main", LoadSceneMode.Single);
         }
     }
