@@ -2,7 +2,7 @@
 
 ## ▶목차
 #### 1. [컨셉](#-concept)
-#### 2. [관련 이미지/영상](#-related-images--videos)
+#### 2. [참고 이미지/영상](#-reference-images--videos)
 #### 3. [대표이미지](#-representative-image)
 #### 4. [작품묘사](#-describe-the-concept--representative-image)
 #### 5. [게임 요소](#-escape-to-memorys-ingredients)
@@ -36,7 +36,7 @@ ________________________________________________________________________________
     
 -------------------------------------------------------------------------------
     
-# ▷ Related Images & Videos
+# ▷ Reference Images & Videos
 
 > - Images   
 ![image](https://user-images.githubusercontent.com/63893895/168222054-f4a2e242-9197-4217-850a-7210e88acf29.png)
