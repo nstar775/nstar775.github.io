@@ -48,7 +48,18 @@ ________________________________________________________________________________
 ------------------------------------------------------------------------------
 
 # ▷ Representative image
+- 컨셉 스케치
 ![image](https://user-images.githubusercontent.com/63893895/139111967-f8332f51-23b3-49bc-9e1b-6a987f91a88b.png)
+
+- 아이콘
+![12 02 ICON](https://github.com/nstar775/nstar775.github.io/assets/63893895/b71ea179-ebb7-49d9-b81d-0db185a7b340)
+
+- 엔딩
+![Ending2_1](https://github.com/nstar775/nstar775.github.io/assets/63893895/ba41163c-149f-41f9-9840-25ccc2c031ca)
+![Ending2](https://github.com/nstar775/nstar775.github.io/assets/63893895/097b533a-2aa7-4295-b58d-b513ba939bd7)
+![Ending1_1](https://github.com/nstar775/nstar775.github.io/assets/63893895/b3c2323d-cb31-4a0d-96af-c0d53bee2f47)
+![Ending1](https://github.com/nstar775/nstar775.github.io/assets/63893895/137df7f6-b999-4937-bd90-767293e05eb0)
+
 
 ------------------------------------------------------------------------------
 
